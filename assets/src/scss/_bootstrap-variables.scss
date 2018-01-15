@@ -1,0 +1,13 @@
+/*!
+ * You can override all Bootstrap variables in this file.
+ *
+ * If you want to know all available variables, look at:
+ * /node_modules/bootstrap/scss/_variables.scss
+ */
+
+// Example changing the default link style
+
+$link-color:                #217cb9;
+$link-decoration:           none;
+$link-hover-color:          darken($link-color, 15%);
+$link-hover-decoration:     none;
