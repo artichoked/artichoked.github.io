@@ -22,7 +22,7 @@ $fa-font-path: "../fonts/";
 @import "../../../node_modules/font-awesome/scss/font-awesome.scss";
 
 
-/* 3. Starter Template
+/* 3. The rest
 -------------------------------------------*/
 
 body {
@@ -55,7 +55,6 @@ body {
   #other-buttons {
     padding: 0;
     display: inline-block;
-    position: fixed;
     right: 5vw;
     }
   }
