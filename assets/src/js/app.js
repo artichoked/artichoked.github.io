@@ -79,7 +79,9 @@ class Search {
     this.elements.form.fadeOut(300)
     this.elements.subtitle.fadeOut(300)
     this.elements.otherButtons.append(`AGAIN!`)
-    this.elements.titleID.animate({ 'left': '-=29vw' }, 800)
+    if ($(window).width() > 768 ) {
+      this.elements.titleID.animate({ 'left': '-=29vw' }, 800)
+    }
     this.elements.otherButtons.fadeIn(2800)
   } // end hide form
 
