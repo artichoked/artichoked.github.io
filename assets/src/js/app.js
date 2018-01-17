@@ -17,7 +17,10 @@ class Search {
       'body': $('body'),
       'titleID': $('#title-id'),
       'viewDiv': $('#view-div'),
-      'otherButtons': $('#other-buttons a')
+      'otherButtons': $('#other-buttons a'),
+      'again': $('#again'),
+      'back': $('#back'),
+      'loading': $('#loading')
     }
     this.viewer = null
   } // end of constructor
@@ -78,7 +81,7 @@ class Search {
     this.elements.body.css({ 'background-image': 'url("../../../assets/dist/img/background-blank.png")' })
     this.elements.form.fadeOut(300)
     this.elements.subtitle.fadeOut(300)
-    this.elements.otherButtons.append(`AGAIN!`)
+    this.elements.again.append(`AGAIN!`)
     if ($(window).width() > 768 ) {
       this.elements.titleID.animate({ 'left': '-=29vw' }, 800)
     }
@@ -99,8 +102,14 @@ class Search {
     this.viewer = new google.books.DefaultViewer(
       document.querySelector('#view-div')
     )
-
-    this.viewer.load(gbid)
+    this.viewer.load(gbid, null, ()=> {
+      this.elements.loading.hide()
+      window.setTimeout (()=> {
+          this.elements.back.append(`back to results`)
+        },
+        500
+      )
+    })
   }
 } // end of Search class
 

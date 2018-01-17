@@ -28,7 +28,7 @@ $fa-font-path: "../fonts/";
 body {
   background-image: url("../../../assets/dist/img/background2.png");
     @media screen and (max-width: 800px) {
-      background-size: auto;  
+      background-size: auto;
     }
   background-size: cover;
   padding-top: 2rem;
@@ -42,8 +42,8 @@ body {
   }
 
   a:link,
-  a:active,
-  a:visited {
+  a:visited,
+  a:active {
    text-decoration: none;
    color: #F4666D;
   }
@@ -62,13 +62,14 @@ body {
       @media screen and (max-width: 800px) {
         text-align: center;
       }
-    }
-    #other-buttons.a,
-    #other-buttons a {
-      &:hover {
-        color: #F3AE9B;
+
+      #again {
+        &:hover {
+          color: #F3AE9B !important;
+        }
       }
     }
+
 
   h1 {
   	color: #00F4AD;
@@ -81,6 +82,13 @@ body {
   p {
     text-align: center;
     margin-bottom: 0;
+
+    a {
+      @media screen and (max-width: 800px) {
+        text-align: center;
+        display: block;
+      }
+    }
   }
 
   #search-col {
@@ -181,16 +189,28 @@ h4.card-title {
 img {
   min-width: 100%;
   min-height: 100%;
-  //object-fit: cover;
-  //height:40vh;
   vertical-aligh: auto;
 }
 
 #back {
-
+  padding-top: -1rem;
+     &:link,
+     &:visited,
+     &:active {
+      text-decoration: none;
+      color: black;
+      font-weight:200;
+    }
+    &:hover {
+     color:darkgrey;
+   }
 }
 
 #view-div {
   width: 100%;
   height: 70vh;
+}
+
+#loading {
+  font-size: 10rem;
 }
