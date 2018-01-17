@@ -27,6 +27,9 @@ $fa-font-path: "../fonts/";
 
 body {
   background-image: url("../../../assets/dist/img/background2.png");
+    @media screen and (max-width: 800px) {
+      background-size: auto;
+    }
   background-size: cover;
   padding-top: 2rem;
   padding-bottom: 5rem;
